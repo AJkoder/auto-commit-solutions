@@ -39,10 +39,10 @@ def commit_and_push(new_files):
         new_files: list of file paths that were just saved
     """
     if not new_files:
-        print("  ℹ️  No files to commit.")
+        print("No files to commit.")
         return
 
-    print(f"\n📦 Committing {len(new_files)} new solution(s) to Git...")
+    print(f"\nCommitting {len(new_files)} new solution(s) to Git...")
 
     try:
         # 1. Stage all new/modified files in solutions/
@@ -57,26 +57,26 @@ def commit_and_push(new_files):
             parts = new_files[0].replace("\\", "/").split("/")
             problem = parts[2] if len(parts) >= 3 else "solution"
             platform = parts[1] if len(parts) >= 2 else "platform"
-            msg = f"✅ [{today}] Solved: {problem} ({platform})"
+            msg = f"[{today}] Solved: {problem} ({platform})"
         else:
             platforms = set()
             for f in new_files:
                 parts = f.replace("\\", "/").split("/")
                 if len(parts) >= 2:
                     platforms.add(parts[1])
-            msg = f"✅ [{today}] Added {len(new_files)} solutions ({', '.join(platforms)})"
+            msg = f"[{today}] Added {len(new_files)} solutions ({', '.join(platforms)})"
 
         # 3. Commit
         run_git(["commit", "-m", msg])
-        print(f"  ✅ Committed: {msg}")
+        print(f" Committed: {msg}")
         logging.info(f"Committed: {msg}")
 
         # 4. Push to remote
         run_git(["push", "origin", "main"])
-        print("  🚀 Pushed to GitHub!")
+        print("Pushed to GitHub!")
         logging.info("Pushed to origin/main")
 
     except Exception as e:
         logging.error(f"Git operation failed: {e}")
-        print(f"  ❌ Git error: {e}")
-        print("  💡 Tip: Make sure git remote is set up and you have push access.")
+        print(f"Git error: {e}")
+        print("Tip: Make sure git remote is set up and you have push access.")
