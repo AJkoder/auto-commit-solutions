@@ -2,7 +2,7 @@
 # Difficulty: Easy
 # Tags     : Tree, Depth-First Search, Binary Tree
 # URL      : https://leetcode.com/problems/balanced-binary-tree/
-# Solved on: 2026-04-08 17:49
+# Solved on: 2026-04-08 18:10
 # ──────────────────────────────────────────────────
 
 class Solution:

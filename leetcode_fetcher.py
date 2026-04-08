@@ -151,11 +151,11 @@ def save_solution(detail, submission_id):
     ext = EXTENSIONS.get(lang, "txt")
 
     # folder: solutions/leetcode/two-sum/
-    folder = os.path.join("solutions", "leetcode", slug)
+    folder = os.path.join("solutions", "leetcode")
     os.makedirs(folder, exist_ok=True)
 
     filename = f"solution.{ext}"
-    filepath = os.path.join(folder, filename)
+    filepath = os.path.join(folder, f"{slug}.{ext}")
 
     # Build a nice file header
     header_lines = [

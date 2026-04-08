@@ -2,7 +2,7 @@
 # Difficulty: Medium
 # Tags     : Array, Dynamic Programming, Greedy
 # URL      : https://leetcode.com/problems/jump-game/
-# Solved on: 2026-04-05 22:39
+# Solved on: 2026-04-08 18:10
 # ──────────────────────────────────────────────────
 
 class Solution:

@@ -2,7 +2,7 @@
 # Difficulty: Easy
 # Tags     : Array, Greedy
 # URL      : https://leetcode.com/problems/lemonade-change/
-# Solved on: 2026-04-05 22:39
+# Solved on: 2026-04-08 18:10
 # ──────────────────────────────────────────────────
 
 class Solution:
