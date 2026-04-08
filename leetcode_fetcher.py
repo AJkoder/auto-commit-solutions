@@ -174,7 +174,7 @@ def save_solution(detail, submission_id):
         f.write(header + code + "\n")
 
     logging.info(f"Saved: {filepath}")
-    print(f"  ✅ Saved: {filepath}")
+    print(f"Saved: {filepath}")
     return filepath
 
 
@@ -186,14 +186,14 @@ def run():
     seen_ids = load_seen_ids()
     new_files = []
 
-    print("🔍 Checking LeetCode for new accepted submissions...")
+    print("Checking LeetCode for new accepted submissions...")
     logging.info("Polling LeetCode...")
 
     try:
         submissions = fetch_recent_accepted(username, session_cookie)
     except Exception as e:
         logging.error(f"Failed to fetch submissions: {e}")
-        print(f"  ❌ Error fetching submissions: {e}")
+        print(f" Error fetching submissions: {e}")
         return []
 
     for sub in submissions:
@@ -202,7 +202,7 @@ def run():
         if sub_id in seen_ids:
             continue  # already processed
 
-        print(f"  🆕 New submission found: {sub['title']} ({sub['lang']})")
+        print(f"New submission found: {sub['title']} ({sub['lang']})")
         logging.info(f"New submission: {sub['title']} id={sub_id}")
 
         try:
@@ -217,7 +217,7 @@ def run():
 
         except Exception as e:
             logging.error(f"Error processing submission {sub_id}: {e}")
-            print(f"  ❌ Error: {e}")
+            print(f"Error: {e}")
 
     save_seen_ids(seen_ids)
     return new_files
@@ -226,4 +226,4 @@ def run():
 if __name__ == "__main__":
     files = run()
     if not files:
-        print("  ℹ️  No new submissions to process.")
+        print("No new submissions to process.")

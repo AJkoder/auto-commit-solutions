@@ -36,6 +36,9 @@ EXTENSIONS = {
 
 CF_API = "https://codeforces.com/api"
 
+def run():
+    print("Codeforces: feature in progress.")
+    return []
 
 def load_config():
     with open("config.json", "r") as f:
@@ -180,57 +183,57 @@ def save_solution(submission, code):
         f.write(header + code + "\n")
 
     logging.info(f"Saved: {filepath}")
-    print(f"  ✅ Saved: {filepath}")
+    print(f"Saved: {filepath}")
     return filepath
 
 
-def run():
-    config = load_config()
-    handle = config["codeforces"]["handle"]
+# def run():
+#     config = load_config()
+#     handle = config["codeforces"]["handle"]
 
-    seen_ids = load_seen_ids()
-    new_files = []
+#     seen_ids = load_seen_ids()
+#     new_files = []
 
-    print("🔍 Checking Codeforces for new accepted submissions...")
-    logging.info("Polling Codeforces...")
+#     print("Checking Codeforces for new accepted submissions...")
+#     logging.info("Polling Codeforces...")
 
-    try:
-        submissions = fetch_accepted_submissions(handle)
-    except Exception as e:
-        logging.error(f"Failed to fetch submissions: {e}")
-        print(f"  ❌ Error fetching submissions: {e}")
-        return []
+#     try:
+#         submissions = fetch_accepted_submissions(handle)
+#     except Exception as e:
+#         logging.error(f"Failed to fetch submissions: {e}")
+#         print(f"Error fetching submissions: {e}")
+#         return []
 
-    for sub in submissions:
-        sub_id = str(sub["id"])
+#     for sub in submissions:
+#         sub_id = str(sub["id"])
 
-        if sub_id in seen_ids:
-            continue
+#         if sub_id in seen_ids:
+#             continue
 
-        problem_name = sub["problem"].get("name", "Unknown")
-        contest_id = sub.get("contestId", "unknown")
-        print(f"  🆕 New AC found: {problem_name} (Contest {contest_id})")
-        logging.info(f"New AC: {problem_name} id={sub_id}")
+#         problem_name = sub["problem"].get("name", "Unknown")
+#         contest_id = sub.get("contestId", "unknown")
+#         print(f"New AC found: {problem_name} (Contest {contest_id})")
+#         logging.info(f"New AC: {problem_name} id={sub_id}")
 
-        try:
-            code = fetch_submission_code(contest_id, sub_id, handle)
-            if not code.strip():
-                logging.warning(f"Empty code for submission {sub_id}, skipping")
-                continue
+#         try:
+#             code = fetch_submission_code(contest_id, sub_id, handle)
+#             if not code.strip():
+#                 logging.warning(f"Empty code for submission {sub_id}, skipping")
+#                 continue
 
-            filepath = save_solution(sub, code)
-            new_files.append(filepath)
-            seen_ids.add(sub_id)
+#             filepath = save_solution(sub, code)
+#             new_files.append(filepath)
+#             seen_ids.add(sub_id)
 
-        except Exception as e:
-            logging.error(f"Error processing submission {sub_id}: {e}")
-            print(f"  ❌ Error: {e}")
+#         except Exception as e:
+#             logging.error(f"Error processing submission {sub_id}: {e}")
+#             print(f" Error: {e}")
 
-    save_seen_ids(seen_ids)
-    return new_files
+#     save_seen_ids(seen_ids)
+#     return new_files
 
 
 if __name__ == "__main__":
     files = run()
     if not files:
-        print("  ℹ️  No new submissions to process.")
+        print("No new submissions to process.")
