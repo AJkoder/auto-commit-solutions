@@ -1,163 +1,85 @@
-# 🤖 Auto-Commit Solutions
+# Auto-Commit Solutions
 
-Automatically fetches your accepted submissions from **LeetCode** and **Codeforces** and commits them to GitHub — every 10 minutes via a cron job.
-
----
-
-## 📁 Project Structure
-
-```
-auto-commit-solutions/
-│
-├── main.py                  ← Run this (entry point)
-├── leetcode_fetcher.py      ← Fetches LeetCode solutions via GraphQL API
-├── codeforces_fetcher.py    ← Fetches Codeforces solutions via REST API + scraping
-├── git_committer.py         ← Runs git add / commit / push
-│
-├── config.json              ← Your credentials (NEVER commit this!)
-├── requirements.txt
-│
-├── solutions/
-│   ├── leetcode/
-│   │   └── two-sum/
-│   │       └── solution.py  ← auto-saved with problem info in header
-│   └── codeforces/
-│       └── 1234_A_WaterMelon/
-│           └── solution.cpp
-│
-└── logs/
-    ├── leetcode.log
-    ├── codeforces.log
-    ├── git.log
-    ├── seen_leetcode.json   ← tracks which submissions were already committed
-    └── seen_codeforces.json
-```
+Automatically saves your accepted LeetCode submissions to GitHub. Solve a problem, and within 10 minutes it's committed — no manual effort.
 
 ---
 
-## ⚙️ Setup (Step by Step)
+## How it works
 
-### Step 1 — Clone / init your GitHub repo
+Every 10 minutes the script checks your LeetCode account for new accepted submissions, saves the solution as a file, and pushes it to GitHub automatically.
 
+---
+
+## Setup
+
+**1. Install dependencies**
 ```bash
-git init
-git remote add origin https://github.com/YOUR_USERNAME/cp-solutions.git
-git branch -M main
+pip install requests
 ```
 
-### Step 2 — Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 3 — Fill in config.json
-
-#### For LeetCode:
-1. Go to [leetcode.com](https://leetcode.com) and log in
-2. Open **DevTools** (F12) → **Application** tab → **Cookies** → `https://leetcode.com`
-3. Copy the value of the cookie named `LEETCODE_SESSION`
-4. Paste it in `config.json`
-
-#### For Codeforces:
-1. Just put your Codeforces handle (username) in `config.json`
-2. The `jsessionid` field is optional — only needed for private/gym contests
-
+**2. Fill in config.json**
 ```json
 {
   "leetcode": {
-    "username": "john_doe",
-    "session_cookie": "eyJ0eXAiOiJ..."
-  },
-  "codeforces": {
-    "handle": "john_doe",
-    "jsessionid": ""
+    "username": "your_username",
+    "session_cookie": "paste_your_LEETCODE_SESSION_cookie_here"
   }
 }
 ```
 
-> ⚠️ **IMPORTANT**: Add `config.json` to your `.gitignore` — never push your session cookie!
+To get your session cookie — log into leetcode.com → F12 → Application tab → Cookies → copy the value of `LEETCODE_SESSION`
 
-### Step 4 — Add config.json to .gitignore
-
+**3. Add config.json to .gitignore**
 ```bash
 echo "config.json" >> .gitignore
 echo "logs/" >> .gitignore
-git add .gitignore
-git commit -m "Initial commit"
-git push -u origin main
+echo "__pycache__/" >> .gitignore
 ```
 
-### Step 5 — Test it manually
+**4. Run manually to test**
+```bash
+python main.py
+```
+
+---
+
+## Auto-run setup (Windows)
+
+Uses Windows Task Scheduler to run every 10 minutes in the background.
+
+- Program: `C:\path\to\project\venv\Scripts\python.exe`
+- Arguments: `main.py`
+- Start in: `C:\path\to\project`
+
+---
+
+## Usage
 
 ```bash
-python main.py                   # both platforms
-python main.py --platform lc     # only LeetCode
-python main.py --platform cf     # only Codeforces
-python main.py --no-push         # save files but don't push
+python main.py                # run normally
+python main.py --no-push      # save files but don't push to GitHub
 ```
 
 ---
 
-## ⏰ Setting Up the Cron Job (runs every 10 minutes)
+## Tech used
 
-```bash
-crontab -e
-```
+Python — `requests`, `subprocess`, `argparse`, `logging`, `json`, `os`
 
-Add this line (update the path to your actual project path):
-
-```
-*/10 * * * * cd /home/youruser/auto-commit-solutions && python main.py >> logs/cron.log 2>&1
-```
-
-To verify it's set:
-```bash
-crontab -l
-```
+LeetCode GraphQL API · Git · Windows Task Scheduler
 
 ---
 
-## 🔍 What Each File Does (with your roadmap knowledge)
-
-| File | Concepts used |
-|------|--------------|
-| `leetcode_fetcher.py` | `requests`, JSON, file handling, logging, exceptions |
-| `codeforces_fetcher.py` | `requests`, REST API, html.parser, logging |
-| `git_committer.py` | `subprocess`, os, exceptions |
-| `main.py` | `argparse`, modules, imports |
-| `config.json` | JSON config pattern |
-| cron | Linux cron basics |
-
----
-
-## 📝 Example Output
+## Project structure
 
 ```
-=======================================================
-  🤖 Auto-Commit Solutions — 2025-03-15 14:30:01
-=======================================================
-
-🔍 Checking LeetCode for new accepted submissions...
-  🆕 New submission found: Two Sum (python3)
-  ✅ Saved: solutions/leetcode/two-sum/solution.py
-
-🔍 Checking Codeforces for new accepted submissions...
-  🆕 New AC found: Watermelon (Contest 4)
-  ✅ Saved: solutions/codeforces/4_A_Watermelon/solution.py
-
-📦 Committing 2 new solution(s) to Git...
-  ✅ Committed: ✅ [2025-03-15] Added 2 solutions (leetcode, codeforces)
-  🚀 Pushed to GitHub!
-
-=======================================================
+auto-commit-solutions/
+├── main.py
+├── leetcode_fetcher.py
+├── git_committer.py
+├── config.json              ← never commit this
+└── solutions/
+    └── leetcode/
+        ├── two-sum.py
+        └── jump-game.py
 ```
-
----
-
-## 🚀 Possible Enhancements (Phase 5 ideas)
-
-- Add a `--stats` flag that prints your solve count per difficulty/tag
-- Build a Flask dashboard to browse your solutions (Phase 3!)
-- Add email/Telegram notification when a new solution is committed
-- Track your rating progression on Codeforces over time
