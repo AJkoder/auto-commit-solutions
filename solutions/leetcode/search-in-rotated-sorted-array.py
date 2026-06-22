@@ -2,7 +2,7 @@
 # Difficulty: Medium
 # Tags     : Array, Binary Search
 # URL      : https://leetcode.com/problems/search-in-rotated-sorted-array/
-# Solved on: 2026-06-21 20:09
+# Solved on: 2026-06-22 23:55
 # ──────────────────────────────────────────────────
 
 class Solution:
@@ -10,39 +10,26 @@ class Solution:
 
         n = len(nums)
 
-        # Find pivot (smallest element index)
         low = 0
         high = n - 1
+        ans=0
 
-        while low < high:
-            mid = (low + high) // 2
-
-            if nums[mid] > nums[high]:
-                low = mid + 1
-            else:
-                high = mid
-
-        pivot = low
-
-        # Decide which side to search
-        if nums[pivot] <= target <= nums[n - 1]:
-            low = pivot
-            high = n - 1
-        else:
-            low = 0
-            high = pivot - 1
-
-        # Normal Binary Search
         while low <= high:
             mid = (low + high) // 2
-
-            if nums[mid] == target:
+            if nums[mid]==target:
                 return mid
-
-            elif nums[mid] < target:
-                low = mid + 1
-
+            if nums[low]<=nums[mid]:
+                if nums[low]<=target and target<=nums[mid]:
+                    high=mid-1
+                else:
+                    low=mid+1
             else:
-                high = mid - 1
-
+                if nums[mid]<=target and target<=nums[high]:
+                    low=mid+1
+                else:
+                    high=mid-1
+                
         return -1
+
+
+            
