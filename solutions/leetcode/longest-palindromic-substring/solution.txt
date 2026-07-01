@@ -1,0 +1,4 @@
+# Problem: longest-palindromic-substring
+# URL: https://leetcode.com/problems/longest-palindromic-substring/
+# Solved on: 2026-07-01
+
