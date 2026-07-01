@@ -1,85 +1,107 @@
-# Auto-Commit Solutions
+# LeetCode Auto-Commit 
 
-Automatically saves your accepted LeetCode submissions to GitHub. Solve a problem, and within 10 minutes it's committed — no manual effort.
+A Chrome extension that **automatically commits your accepted LeetCode submissions to GitHub** the moment you hit "Accepted" — no session cookies, no cron jobs, no manual effort.
+
+---
+
+## Why this exists
+
+The old approach (Python script + Task Scheduler + LeetCode session cookie) had one big problem — the session cookie expires every few weeks, breaking everything silently.
+
+This extension fixes that permanently:
+- Runs **inside your browser** where you're already logged in
+- Detects "Accepted" **instantly** (no polling every 10 minutes)
+- Only needs a **GitHub Personal Access Token** — set once, works forever
+- Commits code directly via GitHub API — no local git, no Python, no terminal
 
 ---
 
 ## How it works
 
-Every 10 minutes the script checks your LeetCode account for new accepted submissions, saves the solution as a file, and pushes it to GitHub automatically.
+```
+You submit on LeetCode
+       ↓
+content.js detects green "Accepted" via MutationObserver
+       ↓
+Reads problem title, slug, language, code from Monaco editor
+       ↓
+Sends to background.js (service worker)
+       ↓
+Checks seen list to avoid duplicate commits
+       ↓
+Calls GitHub Contents API → commits file to your repo
+```
+
+Your solution lands at:
+```
+solutions/leetcode/<problem-slug>/solution.<ext>
+```
 
 ---
 
 ## Setup
 
-**1. Install dependencies**
-```bash
-pip install requests
+### Step 1 — Get a GitHub Personal Access Token
+1. Go to GitHub → Profile → Settings → Developer Settings
+2. Personal access tokens → Tokens (classic) → Generate new token
+3. Check the **`repo`** scope checkbox
+4. Generate and copy the token (starts with `ghp_`)
+
+### Step 2 — Load the extension in Chrome
+1. Download or clone this repo
+2. Open Chrome → go to `chrome://extensions`
+3. Turn on **Developer mode** (top right)
+4. Click **Load unpacked** → select the `lc-auto-commit` folder
+5. Pin the extension from the 🧩 puzzle icon in toolbar
+
+### Step 3 — Configure
+1. Click the extension icon
+2. Paste your GitHub token
+3. Enter your repo as `username/repo-name` (e.g. `AJkoder/cp-solutions`)
+4. Click **Save Credentials**
+
+### Step 4 — Use it
+Just solve problems on LeetCode normally. Every time you get "Accepted", the extension auto-commits within seconds.
+
+---
+
+## Files
+
 ```
-
-**2. Fill in config.json**
-```json
-{
-  "leetcode": {
-    "username": "your_username",
-    "session_cookie": "paste_your_LEETCODE_SESSION_cookie_here"
-  }
-}
-```
-
-To get your session cookie — log into leetcode.com → F12 → Application tab → Cookies → copy the value of `LEETCODE_SESSION`
-
-**3. Add config.json to .gitignore**
-```bash
-echo "config.json" >> .gitignore
-echo "logs/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-```
-
-**4. Run manually to test**
-```bash
-python main.py
+lc-auto-commit/
+├── manifest.json      ← extension config, permissions
+├── content.js         ← runs on LeetCode, detects Accepted, reads code
+├── background.js      ← service worker, dedupes, calls GitHub API
+├── popup.html         ← settings UI
+└── popup.js           ← saves/loads GitHub token and repo
 ```
 
 ---
 
-## Auto-run setup (Windows)
+## Supported languages
 
-Uses Windows Task Scheduler to run every 10 minutes in the background.
-
-- Program: `C:\path\to\project\venv\Scripts\python.exe`
-- Arguments: `main.py`
-- Start in: `C:\path\to\project`
-
----
-
-## Usage
-
-```bash
-python main.py                # run normally
-python main.py --no-push      # save files but don't push to GitHub
-```
+Python, C++, Java, JavaScript, TypeScript, Go, Rust, C, C#, Kotlin, Swift, Ruby, Scala, PHP
 
 ---
 
 ## Tech used
 
-Python — `requests`, `subprocess`, `argparse`, `logging`, `json`, `os`
-
-LeetCode GraphQL API · Git · Windows Task Scheduler
+Chrome Extensions (Manifest V3) · MutationObserver · Monaco Editor API · GitHub Contents REST API · chrome.storage
 
 ---
 
-## Project structure
+## Comparison with v1 (Python script)
 
-```
-auto-commit-solutions/
-├── main.py
-├── leetcode_fetcher.py
-├── git_committer.py
-├── config.json              ← never commit this
-└── solutions/
-    └── leetcode/
-        ├── two-sum.py
-        └── jump-game.py
-```
+| | v1 Python Script | v2 Chrome Extension |
+|---|---|---|
+| Auth | LeetCode session cookie (expires) | GitHub PAT (set once) |
+| Trigger | Polls every 10 minutes | Instant on Accepted |
+| Setup | Python, pip, Task Scheduler | Just load unpacked |
+| Works when | Script is running | Browser is open |
+| Cookie needed | Yes, refresh regularly | No |
+
+---
+
+## Contributing
+
+PRs welcome. If LeetCode updates their UI and the selector breaks, open an issue with the new element structure.
