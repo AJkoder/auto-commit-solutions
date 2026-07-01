@@ -1,0 +1,4 @@
+# Problem: find-the-safest-path-in-a-grid
+# URL: https://leetcode.com/problems/find-the-safest-path-in-a-grid/
+# Solved on: 2026-07-01
+
