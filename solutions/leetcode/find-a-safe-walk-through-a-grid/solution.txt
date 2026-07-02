@@ -1,0 +1,4 @@
+# Problem: find-a-safe-walk-through-a-grid
+# URL: https://leetcode.com/problems/find-a-safe-walk-through-a-grid/
+# Solved on: 2026-07-02
+
