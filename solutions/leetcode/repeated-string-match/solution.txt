@@ -2,7 +2,3 @@
 # URL: https://leetcode.com/problems/repeated-string-match/
 # Solved on: 2026-07-04
 
-class Solution:
-    def repeatedStringMatch(self, a: str, b: str) -> int:
-        
-
