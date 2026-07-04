@@ -1,0 +1,4 @@
+# Problem: minimum-score-of-a-path-between-two-cities
+# URL: https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/
+# Solved on: 2026-07-04
+
