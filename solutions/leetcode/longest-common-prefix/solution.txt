@@ -1,4 +1,4 @@
 # Problem: longest-common-prefix
 # URL: https://leetcode.com/problems/longest-common-prefix/
-# Solved on: 2026-07-02
+# Solved on: 2026-07-04
 
