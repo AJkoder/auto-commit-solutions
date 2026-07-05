@@ -1,0 +1,4 @@
+# Problem: number-of-paths-with-max-score
+# URL: https://leetcode.com/problems/number-of-paths-with-max-score/
+# Solved on: 2026-07-05
+
