@@ -1,0 +1,4 @@
+# Problem: remove-covered-intervals
+# URL: https://leetcode.com/problems/remove-covered-intervals/
+# Solved on: 2026-07-06
+
