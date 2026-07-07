@@ -1,0 +1,4 @@
+# Problem: concatenate-non-zero-digits-and-multiply-by-sum-i
+# URL: https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/
+# Solved on: 2026-07-07
+
