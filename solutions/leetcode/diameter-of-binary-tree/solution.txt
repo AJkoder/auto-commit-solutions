@@ -1,0 +1,4 @@
+# Problem: diameter-of-binary-tree
+# URL: https://leetcode.com/problems/diameter-of-binary-tree/
+# Solved on: 2026-07-07
+
