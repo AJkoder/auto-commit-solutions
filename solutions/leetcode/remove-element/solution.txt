@@ -1,0 +1,4 @@
+# Problem: remove-element
+# URL: https://leetcode.com/problems/remove-element/
+# Solved on: 2026-07-10
+
