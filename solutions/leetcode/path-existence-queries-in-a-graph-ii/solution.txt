@@ -1,0 +1,4 @@
+# Problem: path-existence-queries-in-a-graph-ii
+# URL: https://leetcode.com/problems/path-existence-queries-in-a-graph-ii/
+# Solved on: 2026-07-10
+
