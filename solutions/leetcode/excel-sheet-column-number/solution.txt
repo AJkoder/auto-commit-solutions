@@ -1,0 +1,4 @@
+# Problem: excel-sheet-column-number
+# URL: https://leetcode.com/problems/excel-sheet-column-number/
+# Solved on: 2026-07-10
+
