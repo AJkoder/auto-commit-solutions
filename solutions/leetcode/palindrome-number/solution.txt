@@ -1,0 +1,4 @@
+# Problem: palindrome-number
+# URL: https://leetcode.com/problems/palindrome-number/
+# Solved on: 2026-07-10
+
