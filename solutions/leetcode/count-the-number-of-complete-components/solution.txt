@@ -1,0 +1,4 @@
+# Problem: count-the-number-of-complete-components
+# URL: https://leetcode.com/problems/count-the-number-of-complete-components/
+# Solved on: 2026-07-11
+
