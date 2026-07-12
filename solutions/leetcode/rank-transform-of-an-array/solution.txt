@@ -1,0 +1,4 @@
+# Problem: rank-transform-of-an-array
+# URL: https://leetcode.com/problems/rank-transform-of-an-array/
+# Solved on: 2026-07-12
+
