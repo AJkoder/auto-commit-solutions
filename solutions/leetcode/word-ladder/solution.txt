@@ -1,0 +1,4 @@
+# Problem: word-ladder
+# URL: https://leetcode.com/problems/word-ladder/
+# Solved on: 2026-07-13
+
