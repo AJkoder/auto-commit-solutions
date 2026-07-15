@@ -1,0 +1,4 @@
+# Problem: gcd-of-odd-and-even-sums
+# URL: https://leetcode.com/problems/gcd-of-odd-and-even-sums/
+# Solved on: 2026-07-15
+
