@@ -1,0 +1,4 @@
+# Problem: find-pivot-index
+# URL: https://leetcode.com/problems/find-pivot-index/
+# Solved on: 2026-07-17
+
