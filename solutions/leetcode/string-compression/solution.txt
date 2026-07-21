@@ -1,0 +1,4 @@
+# Problem: string-compression
+# URL: https://leetcode.com/problems/string-compression/
+# Solved on: 2026-07-21
+
