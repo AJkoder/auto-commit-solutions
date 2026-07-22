@@ -1,0 +1,4 @@
+# Problem: maximize-active-section-with-trade-ii
+# URL: https://leetcode.com/problems/maximize-active-section-with-trade-ii/
+# Solved on: 2026-07-22
+
