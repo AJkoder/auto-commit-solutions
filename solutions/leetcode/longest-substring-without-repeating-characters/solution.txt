@@ -1,0 +1,4 @@
+# Problem: longest-substring-without-repeating-characters
+# URL: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+# Solved on: 2026-07-27
+
