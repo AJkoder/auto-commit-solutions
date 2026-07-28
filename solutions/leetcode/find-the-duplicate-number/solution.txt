@@ -1,0 +1,4 @@
+# Problem: find-the-duplicate-number
+# URL: https://leetcode.com/problems/find-the-duplicate-number/
+# Solved on: 2026-07-28
+
