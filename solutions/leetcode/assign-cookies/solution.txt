@@ -1,4 +1,4 @@
 # Problem: assign-cookies
 # URL: https://leetcode.com/problems/assign-cookies/
-# Solved on: 2026-07-31
+# Solved on: 2026-08-01
 
