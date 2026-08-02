@@ -1,0 +1,4 @@
+# Problem: jump-game-ii
+# URL: https://leetcode.com/problems/jump-game-ii/
+# Solved on: 2026-08-02
+
