@@ -1,0 +1,4 @@
+# Problem: jump-game
+# URL: https://leetcode.com/problems/jump-game/
+# Solved on: 2026-08-02
+
