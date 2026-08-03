@@ -1,4 +1,4 @@
 # Problem: binary-tree-preorder-traversal
 # URL: https://leetcode.com/problems/binary-tree-preorder-traversal/
-# Solved on: 2026-07-06
+# Solved on: 2026-08-03
 
