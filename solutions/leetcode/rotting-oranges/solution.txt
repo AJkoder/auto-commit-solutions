@@ -1,4 +1,4 @@
 # Problem: rotting-oranges
 # URL: https://leetcode.com/problems/rotting-oranges/
-# Solved on: 2026-07-07
+# Solved on: 2026-08-03
 
