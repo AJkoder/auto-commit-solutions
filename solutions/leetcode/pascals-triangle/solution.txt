@@ -1,4 +1,4 @@
 # Problem: pascals-triangle
 # URL: https://leetcode.com/problems/pascals-triangle/
-# Solved on: 2026-07-28
+# Solved on: 2026-08-04
 
