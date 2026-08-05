@@ -1,4 +1,4 @@
 # Problem: next-permutation
 # URL: https://leetcode.com/problems/next-permutation/
-# Solved on: 2026-08-04
+# Solved on: 2026-08-05
 
