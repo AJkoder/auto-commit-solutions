@@ -1,0 +1,4 @@
+# Problem: n-queens
+# URL: https://leetcode.com/problems/n-queens/
+# Solved on: 2026-08-06
+
