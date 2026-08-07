@@ -1,0 +1,4 @@
+# Problem: smallest-divisible-digit-product-ii
+# URL: https://leetcode.com/problems/smallest-divisible-digit-product-ii/
+# Solved on: 2026-08-07
+
