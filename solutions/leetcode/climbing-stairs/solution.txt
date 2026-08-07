@@ -1,0 +1,4 @@
+# Problem: climbing-stairs
+# URL: https://leetcode.com/problems/climbing-stairs/
+# Solved on: 2026-08-07
+
