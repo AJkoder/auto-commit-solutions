@@ -1,0 +1,4 @@
+# Problem: search-in-a-binary-search-tree
+# URL: https://leetcode.com/problems/search-in-a-binary-search-tree/
+# Solved on: 2026-08-08
+
