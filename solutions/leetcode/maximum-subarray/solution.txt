@@ -1,4 +1,4 @@
 # Problem: maximum-subarray
 # URL: https://leetcode.com/problems/maximum-subarray/
-# Solved on: 2026-07-28
+# Solved on: 2026-08-08
 
