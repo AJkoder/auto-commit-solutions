@@ -1,4 +1,4 @@
 # Problem: rotate-image
 # URL: https://leetcode.com/problems/rotate-image/
-# Solved on: 2026-07-28
+# Solved on: 2026-08-08
 
