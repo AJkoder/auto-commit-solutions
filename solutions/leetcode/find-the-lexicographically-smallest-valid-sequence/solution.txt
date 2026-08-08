@@ -1,0 +1,6 @@
+# Problem: find-the-lexicographically-smallest-valid-sequence
+# URL: https://leetcode.com/problems/find-the-lexicographically-smallest-valid-sequence/
+# Solved on: 2026-08-08
+
+
+
