@@ -1,0 +1,4 @@
+# Problem: weighted-sum-of-a-tree
+# URL: https://leetcode.com/problems/weighted-sum-of-a-tree/
+# Solved on: 2026-08-09
+
