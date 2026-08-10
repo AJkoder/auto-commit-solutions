@@ -1,4 +1,4 @@
 # Problem: number-of-enclaves
 # URL: https://leetcode.com/problems/number-of-enclaves/
-# Solved on: 2026-07-09
+# Solved on: 2026-08-10
 
