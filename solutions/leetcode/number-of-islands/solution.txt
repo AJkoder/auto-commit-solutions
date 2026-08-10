@@ -1,0 +1,4 @@
+# Problem: number-of-islands
+# URL: https://leetcode.com/problems/number-of-islands/
+# Solved on: 2026-08-10
+
