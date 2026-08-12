@@ -1,4 +1,4 @@
 # Problem: is-graph-bipartite
 # URL: https://leetcode.com/problems/is-graph-bipartite/
-# Solved on: 2026-08-11
+# Solved on: 2026-08-12
 
