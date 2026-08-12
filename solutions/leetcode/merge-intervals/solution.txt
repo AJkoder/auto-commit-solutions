@@ -1,4 +1,4 @@
 # Problem: merge-intervals
 # URL: https://leetcode.com/problems/merge-intervals/
-# Solved on: 2026-08-08
+# Solved on: 2026-08-12
 
