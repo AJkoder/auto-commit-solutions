@@ -1,4 +1,4 @@
 # Problem: merge-sorted-array
 # URL: https://leetcode.com/problems/merge-sorted-array/
-# Solved on: 2026-07-28
+# Solved on: 2026-08-12
 
