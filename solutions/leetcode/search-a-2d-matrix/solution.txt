@@ -1,4 +1,4 @@
 # Problem: search-a-2d-matrix
 # URL: https://leetcode.com/problems/search-a-2d-matrix/
-# Solved on: 2026-07-28
+# Solved on: 2026-08-12
 
