@@ -1,0 +1,4 @@
+# Problem: majority-element
+# URL: https://leetcode.com/problems/majority-element/
+# Solved on: 2026-08-13
+
