@@ -1,0 +1,4 @@
+# Problem: powx-n
+# URL: https://leetcode.com/problems/powx-n/
+# Solved on: 2026-08-13
+
