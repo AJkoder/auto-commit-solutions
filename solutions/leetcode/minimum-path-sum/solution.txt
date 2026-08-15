@@ -1,4 +1,4 @@
 # Problem: minimum-path-sum
 # URL: https://leetcode.com/problems/minimum-path-sum/
-# Solved on: 2026-08-14
+# Solved on: 2026-08-15
 
