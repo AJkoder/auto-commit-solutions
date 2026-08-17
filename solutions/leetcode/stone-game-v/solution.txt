@@ -1,0 +1,4 @@
+# Problem: stone-game-v
+# URL: https://leetcode.com/problems/stone-game-v/
+# Solved on: 2026-08-17
+
