@@ -1,0 +1,4 @@
+# Problem: maximum-sum-of-distinct-subarrays-with-length-k
+# URL: https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/
+# Solved on: 2026-08-19
+
