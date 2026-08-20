@@ -1,0 +1,4 @@
+# Problem: 3sum
+# URL: https://leetcode.com/problems/3sum/
+# Solved on: 2026-08-20
+
