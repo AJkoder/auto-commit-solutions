@@ -1,0 +1,4 @@
+# Problem: remove-nth-node-from-end-of-list
+# URL: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+# Solved on: 2026-08-21
+
