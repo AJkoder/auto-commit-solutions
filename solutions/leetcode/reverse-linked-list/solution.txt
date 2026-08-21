@@ -1,0 +1,4 @@
+# Problem: reverse-linked-list
+# URL: https://leetcode.com/problems/reverse-linked-list/
+# Solved on: 2026-08-21
+
