@@ -1,4 +1,4 @@
 # Problem: house-robber
 # URL: https://leetcode.com/problems/house-robber/
-# Solved on: 2026-08-08
+# Solved on: 2026-08-22
 
