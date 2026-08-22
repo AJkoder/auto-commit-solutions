@@ -1,4 +1,4 @@
 # Problem: triangle
 # URL: https://leetcode.com/problems/triangle/
-# Solved on: 2026-08-15
+# Solved on: 2026-08-22
 
