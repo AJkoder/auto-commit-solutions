@@ -1,0 +1,5 @@
+# Problem: count-k-th-roots-in-a-range
+# URL: https://leetcode.com/problems/count-k-th-roots-in-a-range/
+# Solved on: 2026-08-26
+
+
