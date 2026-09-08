@@ -1,0 +1,4 @@
+# Problem: longest-common-subsequence
+# URL: https://leetcode.com/problems/longest-common-subsequence/
+# Solved on: 2026-09-08
+
