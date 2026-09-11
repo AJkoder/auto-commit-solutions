@@ -1,0 +1,4 @@
+# Problem: intersection-of-two-linked-lists
+# URL: https://leetcode.com/problems/intersection-of-two-linked-lists/
+# Solved on: 2026-09-11
+
