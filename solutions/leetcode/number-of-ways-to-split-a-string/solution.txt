@@ -1,0 +1,4 @@
+# Problem: number-of-ways-to-split-a-string
+# URL: https://leetcode.com/problems/number-of-ways-to-split-a-string/
+# Solved on: 2026-09-11
+
