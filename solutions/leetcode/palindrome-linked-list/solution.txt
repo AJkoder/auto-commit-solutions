@@ -1,0 +1,4 @@
+# Problem: palindrome-linked-list
+# URL: https://leetcode.com/problems/palindrome-linked-list/
+# Solved on: 2026-09-11
+
