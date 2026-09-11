@@ -1,0 +1,4 @@
+# Problem: max-consecutive-ones
+# URL: https://leetcode.com/problems/max-consecutive-ones/
+# Solved on: 2026-09-11
+
