@@ -1,0 +1,4 @@
+# Problem: trapping-rain-water
+# URL: https://leetcode.com/problems/trapping-rain-water/
+# Solved on: 2026-09-11
+
