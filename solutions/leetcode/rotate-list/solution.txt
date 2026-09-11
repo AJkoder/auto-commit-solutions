@@ -1,0 +1,4 @@
+# Problem: rotate-list
+# URL: https://leetcode.com/problems/rotate-list/
+# Solved on: 2026-09-11
+
