@@ -1,0 +1,4 @@
+# Problem: maximum-profit-in-job-scheduling
+# URL: https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+# Solved on: 2026-09-11
+
