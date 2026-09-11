@@ -1,0 +1,4 @@
+# Problem: merge-adjacent-equal-elements
+# URL: https://leetcode.com/problems/merge-adjacent-equal-elements/
+# Solved on: 2026-09-11
+
