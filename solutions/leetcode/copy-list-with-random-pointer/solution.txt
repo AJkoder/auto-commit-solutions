@@ -1,0 +1,4 @@
+# Problem: copy-list-with-random-pointer
+# URL: https://leetcode.com/problems/copy-list-with-random-pointer/
+# Solved on: 2026-09-11
+
