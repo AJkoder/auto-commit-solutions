@@ -1,0 +1,5 @@
+# Problem: cyclically-shift-rows-and-columns
+# URL: https://leetcode.com/problems/cyclically-shift-rows-and-columns/
+# Solved on: 2026-09-13
+
+
