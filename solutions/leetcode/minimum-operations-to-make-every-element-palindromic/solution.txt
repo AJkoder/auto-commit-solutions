@@ -1,0 +1,6 @@
+# Problem: minimum-operations-to-make-every-element-palindromic
+# URL: https://leetcode.com/problems/minimum-operations-to-make-every-element-palindromic/
+# Solved on: 2026-09-13
+
+
+
