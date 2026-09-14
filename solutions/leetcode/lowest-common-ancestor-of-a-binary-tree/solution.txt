@@ -1,0 +1,4 @@
+# Problem: lowest-common-ancestor-of-a-binary-tree
+# URL: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+# Solved on: 2026-09-14
+
