@@ -1,0 +1,4 @@
+# Problem: longest-increasing-subsequence
+# URL: https://leetcode.com/problems/longest-increasing-subsequence/
+# Solved on: 2026-09-15
+
