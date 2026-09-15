@@ -1,0 +1,4 @@
+# Problem: kth-smallest-element-in-a-bst
+# URL: https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+# Solved on: 2026-09-15
+
