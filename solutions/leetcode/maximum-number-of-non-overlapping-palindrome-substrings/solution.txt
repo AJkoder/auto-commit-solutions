@@ -1,0 +1,4 @@
+# Problem: maximum-number-of-non-overlapping-palindrome-substrings
+# URL: https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/
+# Solved on: 2026-09-15
+
