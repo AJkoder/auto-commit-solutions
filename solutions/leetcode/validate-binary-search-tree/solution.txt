@@ -1,4 +1,4 @@
 # Problem: validate-binary-search-tree
 # URL: https://leetcode.com/problems/validate-binary-search-tree/
-# Solved on: 2026-08-09
+# Solved on: 2026-09-15
 
