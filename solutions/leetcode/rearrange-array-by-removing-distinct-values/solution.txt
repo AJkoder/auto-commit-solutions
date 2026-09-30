@@ -1,0 +1,5 @@
+# Problem: rearrange-array-by-removing-distinct-values
+# URL: https://leetcode.com/problems/rearrange-array-by-removing-distinct-values/
+# Solved on: 2026-09-30
+
+
