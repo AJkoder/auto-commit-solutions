@@ -1,0 +1,4 @@
+# Problem: score-of-parentheses
+# URL: https://leetcode.com/problems/score-of-parentheses/
+# Solved on: 2026-10-05
+
